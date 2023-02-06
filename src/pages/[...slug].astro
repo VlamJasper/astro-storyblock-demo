@@ -25,14 +25,7 @@ export async function getStaticPaths() {
 const { story } = Astro.props;
 ---
 
-<html lang="en">
-    <head>
-        <title>Storyblok & Astro</title>
-    </head>
-    <body>
-        <BaseLayout>
-            <Header />
-            <StoryblokComponent blok={story.content} />
-        </BaseLayout>
-    </body>
-</html>
+<BaseLayout>
+    <Header />
+    <StoryblokComponent blok={story.content} />
+</BaseLayout>
