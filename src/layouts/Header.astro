@@ -10,9 +10,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
         ><span class="navicon"></span>
     </label>
     <ul class="menu">
-        <li>
+        <!-- <li>
             <a class={currentPath === '' ? 'active' : ''} href="/">Home</a>
-        </li>
+        </li> -->
         <li>
             <a class={currentPath === 'blog' ? 'active' : ''} href="/blog"
                 >Blog</a
@@ -49,6 +49,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
             width: 100%;
             /* mix-blend-mode: difference; */
             z-index: 3;
+            outline: 2px solid #000;
+            background-color: white;
         }
 
         .header ul {
@@ -61,7 +63,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
         .header li a {
             display: block;
-            padding: 20px 20px;
+            padding: 20px 0px;
             /* border-right: 1px solid #f4f4f4; */
             text-decoration: none;
         }
@@ -122,7 +124,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         }
 
         .menu .active {
-            color: red;
+            text-decoration: underline;
         }
 
         .header .menu-icon .navicon:before {
