@@ -3,6 +3,7 @@ import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
 
 export async function getStaticPaths() {
     const storyblokApi = useStoryblokApi();
@@ -28,4 +29,5 @@ const { story } = Astro.props;
 <BaseLayout>
     <Header />
     <StoryblokComponent blok={story.content} />
+    <Footer />
 </BaseLayout>

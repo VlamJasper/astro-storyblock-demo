@@ -1,0 +1,65 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+
+const { blok } = Astro.props;
+---
+
+<footer>
+    <div class="section-container">
+        <div class="element-container">
+            <div class="wrapper">
+                <div class="element">
+                    <h3 class="text-lg font-medium mb-4">Sitemap</h3>
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="element">
+                    <h3 class="text-lg font-medium mb-4">Contact</h3>
+                    <p class="text-gray-700">dit is wat tekst</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="element">
+                    <h3 class="text-lg font-medium mb-4">Socials</h3>
+                    <p class="text-gray-700">dit is wat tekst</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        min-height: calc(100vh - 86px);
+    }
+
+    a {
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    .element {
+        padding: 30px;
+    }
+
+    .section-container {
+        background: white;
+        /* border-bottom: 2px solid black; */
+        border-left: 2px solid black;
+    }
+
+    .element-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .wrapper {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+</style>

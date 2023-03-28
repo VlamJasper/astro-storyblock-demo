@@ -3,6 +3,7 @@ import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
 
 const sbApi = useStoryblokApi();
 const { data } = await sbApi.get('cdn/stories/home', {
@@ -15,4 +16,5 @@ const story = data.story;
 <BaseLayout>
     <Header />
     <StoryblokComponent blok={story.content} />
+    <Footer />
 </BaseLayout>

@@ -10,9 +10,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
         ><span class="navicon"></span>
     </label>
     <ul class="menu">
-        <!-- <li>
-            <a class={currentPath === '' ? 'active' : ''} href="/">Home</a>
-        </li> -->
         <li>
             <a class={currentPath === 'blog' ? 'active' : ''} href="/blog"
                 >Blog</a
@@ -44,19 +41,15 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     /* header */
-
     .spacer-element {
         background: lightgray;
         height: 86px;
     }
 
     .header {
-        /* background-color: #fff; */
-        /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); */
         position: fixed;
         width: 100%;
         min-height: 86px;
-        /* mix-blend-mode: difference; */
         z-index: 3;
         border-bottom: 2px solid #000;
         background-color: white;
@@ -68,7 +61,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
         padding: 0;
         list-style: none;
         overflow: hidden;
-        /* background-color: #fff; */
     }
 
     .header li a {
@@ -86,12 +78,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
         display: block;
         float: left;
         font-size: 2.5em;
-        padding: 10px 5vw;
+        padding: 10px 30px;
         text-decoration: none;
     }
 
     /* menu */
-
     .header .menu {
         clear: both;
         max-height: 0;
@@ -102,7 +93,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     /* menu icon */
-
     .header .menu-icon {
         cursor: pointer;
         display: inline-block;
@@ -145,7 +135,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     /* menu btn */
-
     .header .menu-btn {
         display: none;
     }
@@ -172,7 +161,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     /* 48em = 768px */
-
     @media (min-width: 48em) {
         .header li {
             float: left;
