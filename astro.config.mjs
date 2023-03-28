@@ -10,6 +10,7 @@ export default defineConfig({
       components: {
         page: 'storyblok/Page',
         feature: 'storyblok/Feature',
+        image: 'storyblok/Image',
         grid: 'storyblok/Grid',
         hero: 'storyblok/Hero',
         teaser: 'storyblok/Teaser',
