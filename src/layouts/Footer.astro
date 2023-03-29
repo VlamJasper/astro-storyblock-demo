@@ -3,6 +3,8 @@ import { storyblokEditable } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 const { blok } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <footer>
@@ -10,23 +12,40 @@ const { blok } = Astro.props;
         <div class="element-container">
             <div class="wrapper">
                 <div class="element">
-                    <h3 class="text-lg font-medium mb-4">Sitemap</h3>
-                    <a href="/">Home</a>
-                    <a href="/blog">Blog</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
+                    <h3>Sitemap</h3>
+                    <a class={currentPath === '' ? 'active' : ''} href="/"
+                        >Home</a
+                    >
+                    <a
+                        class={currentPath === 'blog' ? 'active' : ''}
+                        href="/blog">Blog</a
+                    >
+                    <a
+                        class={currentPath === 'about' ? 'active' : ''}
+                        href="/about">About</a
+                    >
+                    <a
+                        class={currentPath === 'contact' ? 'active' : ''}
+                        href="/contact">Contact</a
+                    >
                 </div>
             </div>
             <div class="wrapper">
                 <div class="element">
-                    <h3 class="text-lg font-medium mb-4">Contact</h3>
-                    <p class="text-gray-700">dit is wat tekst</p>
+                    <h3>Contact</h3>
+                    <p>Straatnaam</p>
+                    <p>Postcode</p>
+                    <p>Land</p>
+                    <p>Telefoonnummer</p>
                 </div>
             </div>
             <div class="wrapper">
                 <div class="element">
-                    <h3 class="text-lg font-medium mb-4">Socials</h3>
-                    <p class="text-gray-700">dit is wat tekst</p>
+                    <h3>Socials</h3>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                    <a href="">LinkedIn</a>
+                    <a href="">Mastodon</a>
                 </div>
             </div>
         </div>
@@ -38,9 +57,26 @@ const { blok } = Astro.props;
         min-height: calc(100vh - 86px);
     }
 
-    a {
+    a,
+    p {
         display: block;
         padding-bottom: 8px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: medium;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    a.active {
+        text-decoration: underline;
     }
 
     .element {
@@ -49,7 +85,6 @@ const { blok } = Astro.props;
 
     .section-container {
         background: white;
-        /* border-bottom: 2px solid black; */
         border-left: 2px solid black;
     }
 

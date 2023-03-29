@@ -4,7 +4,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <header class="header">
-    <a class={currentPath === '' ? 'active' : ''} href="/">Home</a>
+    <a class={currentPath === '' ? 'active' : ''} href="/">&#8212; Home</a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"
         ><span class="navicon"></span>
@@ -38,6 +38,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
     a {
         color: #000;
+        cursor: cell;
     }
 
     /* header */
@@ -50,10 +51,15 @@ const currentPath = pathname.slice(1); // remove the first "/"
         position: fixed;
         width: 100%;
         min-height: 86px;
-        z-index: 3;
+
         border-bottom: 2px solid #000;
         background-color: white;
+
+        font-size: 2.5em;
         text-transform: uppercase;
+
+        padding: 10px 30px;
+        z-index: 3;
     }
 
     .header ul {
@@ -72,14 +78,6 @@ const currentPath = pathname.slice(1); // remove the first "/"
     .header li a:hover,
     .header .menu-btn:hover {
         text-decoration: underline;
-    }
-
-    .header {
-        display: block;
-        float: left;
-        font-size: 2.5em;
-        padding: 10px 30px;
-        text-decoration: none;
     }
 
     /* menu */

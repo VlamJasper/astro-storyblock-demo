@@ -6,8 +6,8 @@ const { blok } = Astro.props;
 
 <div class="wrapper" {...storyblokEditable(blok)}>
     <div class="element">
-        <h3 class="text-lg font-medium mb-4">{blok.name}</h3>
-        <p class="text-gray-700">{blok.content}</p>
+        <h3>{blok.name}</h3>
+        <p>{blok.content}</p>
     </div>
 </div>
 
@@ -20,5 +20,17 @@ const { blok } = Astro.props;
     .element {
         background: white;
         padding: 30px;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: medium;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    p {
+        max-width: 480px;
     }
 </style>

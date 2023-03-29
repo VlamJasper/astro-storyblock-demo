@@ -9,6 +9,8 @@ export default defineConfig({
       accessToken: 'wSY5hr0vVjJZgXyi6nDZxwtt',
       components: {
         page: 'storyblok/Page',
+        blogPost: 'storyblok/BlogPost',
+        blogPostList: 'storyblok/BlogPostList',
         feature: 'storyblok/Feature',
         image: 'storyblok/Image',
         grid: 'storyblok/Grid',
