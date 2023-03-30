@@ -1,0 +1,19 @@
+---
+import { useStoryblokApi } from '@storyblok/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+
+const sbApi = useStoryblokApi();
+const { data } = await sbApi.get('cdn/stories/home', {
+    version: 'draft',
+});
+
+const story = data.story;
+---
+
+<BaseLayout>
+    <Header />
+    <p>Pindakaas</p>
+    <Footer />
+</BaseLayout>
