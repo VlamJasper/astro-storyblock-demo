@@ -8,6 +8,7 @@ export default defineConfig({
     storyblok({
       accessToken: 'wSY5hr0vVjJZgXyi6nDZxwtt',
       components: {
+        globalStyles: 'components/GlobalStyles',
         page: 'storyblok/Page',
         blogPost: 'storyblok/BlogPost',
         blogPostList: 'storyblok/BlogPostList',
