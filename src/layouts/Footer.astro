@@ -12,7 +12,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         <div class="element-container">
             <div class="wrapper">
                 <div class="element">
-                    <h3>Sitemap</h3>
+                    <h3>Menu</h3>
                     <a class={currentPath === '' ? 'active' : ''} href="/"
                         >Home</a
                     >
@@ -51,7 +51,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         </div>
     </div>
 
-    <form
+    <!-- <form
         name="contact"
         method="POST"
         netlify-honeypot="bot-field"
@@ -62,65 +62,86 @@ const currentPath = pathname.slice(1); // remove the first "/"
                 Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
         </p>
-        <p>
-            <label>
-                Email: <input type="text" name="email" />
-            </label>
-        </p>
-        <p>
-            <label>
-                Message: <textarea name="message"></textarea>
-            </label>
-        </p>
-        <p>
-            <button type="submit">Send</button>
-        </p>
-    </form>
+        <div class="section-container">
+            <div class="element-container">
+                <div class="wrapper">
+                    <div class="element">
+                        <p>
+                            <label>
+                                Email: <input type="text" name="email" />
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="element">
+                        <p>
+                            <label
+                                >Name: <input type="text" name="name" />
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="element">
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form> -->
+
+    <style>
+        footer {
+            min-height: calc(100vh - 86px);
+        }
+
+        a,
+        p {
+            display: block;
+            padding-bottom: 8px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* input {
+            border: 2px solid black;
+        } */
+
+        h3 {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            font-weight: medium;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        a.active {
+            text-decoration: underline;
+        }
+
+        .element {
+            padding: 30px;
+        }
+
+        .section-container {
+            background: white;
+            border-left: 2px solid black;
+        }
+
+        .element-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-rows: auto;
+        }
+
+        .wrapper {
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+    </style>
 </footer>
-
-<style>
-    footer {
-        min-height: calc(100vh - 86px);
-    }
-
-    a,
-    p {
-        display: block;
-        padding-bottom: 8px;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    h3 {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        font-weight: medium;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-    }
-
-    a.active {
-        text-decoration: underline;
-    }
-
-    .element {
-        padding: 30px;
-    }
-
-    .section-container {
-        background: white;
-        border-left: 2px solid black;
-    }
-
-    .element-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .wrapper {
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
-    }
-</style>

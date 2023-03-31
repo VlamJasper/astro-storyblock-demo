@@ -7,5 +7,5 @@ const content = renderRichText(blok.content);
 <article {...storyblokEditable(blok)}>
     <h1>{blok.title}</h1>
     <p>{blok.description}</p>
-    <Fragment set:html={content} />
+    <div set:html={content} />
 </article>
