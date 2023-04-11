@@ -5,7 +5,81 @@ const content = renderRichText(blok.content);
 ---
 
 <article {...storyblokEditable(blok)}>
-    <h1>{blok.title}</h1>
-    <p>{blok.description}</p>
-    <div set:html={content} />
+    <div class="element-wrapper">
+        <div class="title-column">
+            <h1>{blok.title}</h1>
+            <p>{blok.description}</p>
+        </div>
+        <img
+            class="title-image"
+            src={blok.image?.filename}
+            alt={blok.image?.alt}
+        />
+        <!-- <div class="empty-column"></div> -->
+        <div class="blog-post" set:html={content} />
+    </div>
 </article>
+
+<style>
+    article {
+        border-bottom: 2px solid black;
+    }
+
+    .element-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'title image'
+            '. post';
+    }
+
+    .title-column {
+        /* position: absolute; */
+        /* float: left; */
+        /* width: 50%; */
+        /* height: calc(100vh - 88px); */
+        grid-area: title;
+        padding: 32px;
+        /* overflow-y: scroll; */
+    }
+
+    .blog-post {
+        grid-area: post;
+        padding: 32px 32px 32px 0px;
+    }
+
+    .title-image {
+        grid-area: image;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 1400px) {
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .element-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                'title'
+                'image'
+                'post';
+        }
+
+        .blog-post {
+            padding: 32px;
+        }
+    }
+
+    @media (max-width: 530px) {
+        h1 {
+            font-size: 3.6em;
+        }
+    }
+</style>

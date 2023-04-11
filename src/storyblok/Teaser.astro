@@ -21,24 +21,29 @@ const { blok } = Astro.props;
     h2 {
         color: white;
         white-space: nowrap;
-        text-transform: uppercase;
         text-align: center;
 
         font-weight: bold;
-        font-size: 2.25rem; /* 36px */
-        line-height: 2.5rem; /* 40px */
 
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        margin-top: 12px;
+        /* padding-bottom: 1rem; */
 
         /* animation properties */
+        transform: translateX(100%);
         -moz-transform: translateX(100%);
         -webkit-transform: translateX(100%);
-        transform: translateX(100%);
 
+        animation: my-animation 15s linear infinite;
         -moz-animation: my-animation 15s linear infinite;
         -webkit-animation: my-animation 15s linear infinite;
-        animation: my-animation 15s linear infinite;
+    }
+
+    @media (max-width: 530px) {
+        h2 {
+            animation: my-animation 5s linear infinite;
+            -moz-animation: my-animation 5s linear infinite;
+            -webkit-animation: my-animation 5s linear infinite;
+        }
     }
 
     /* for Firefox */
@@ -63,14 +68,14 @@ const { blok } = Astro.props;
 
     @keyframes my-animation {
         from {
+            transform: translateX(100%);
             -moz-transform: translateX(100%);
             -webkit-transform: translateX(100%);
-            transform: translateX(100%);
         }
         to {
+            transform: translateX(-100%);
             -moz-transform: translateX(-100%);
             -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
         }
     }
 </style>
