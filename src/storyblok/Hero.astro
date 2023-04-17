@@ -6,6 +6,11 @@ const { blok } = Astro.props;
 
 <div class="hero-section">
     <div {...storyblokEditable(blok)} class="element-container">
+        <!-- <img
+            class="element-image"
+            src={blok.image?.filename}
+            alt={blok.image?.alt}
+        /> -->
         <h1 class="element-headline">
             {blok.headline}
         </h1>
@@ -23,17 +28,20 @@ const { blok } = Astro.props;
         display: grid;
         place-items: end start;
         height: calc(100vh - 88px);
-        background-color: lightgray;
+        color: white;
+        background-color: black;
         background-size: cover;
         padding: 32px 32px 40px 32px;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid white;
     }
 
-    .hero-section-content {
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        margin: 1em;
-        color: white;
+    .element-image {
+        position: absolute;
+        top: 88px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 88px);
+        pointer-events: none;
     }
 
     .element-headline {
@@ -47,34 +55,7 @@ const { blok } = Astro.props;
         max-width: 600px;
     }
 
-    .element-button-wrapper {
-        display: block;
-    }
-
-    .element-button {
-        display: inline-block;
-        cursor: pointer;
-
-        background-color: white;
-        color: black;
-        outline: 2px solid black;
-        box-shadow: 4px 4px 0px 1px #000;
-
-        font-weight: bold;
-        font-size: 1em;
-        text-transform: uppercase;
-        text-decoration: none !important;
-
-        padding: 1em 2em;
-        width: auto;
-    }
-
-    .element-button:hover {
-        background-color: black;
-        color: white;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
         .element-headline {
             font-size: 8em;
         }
@@ -84,7 +65,7 @@ const { blok } = Astro.props;
         }
     }
 
-    @media (max-width: 530px) {
+    @media (max-width: 650px) {
         .element-headline {
             font-size: 3.6em;
         }

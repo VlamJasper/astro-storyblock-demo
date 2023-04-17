@@ -32,22 +32,49 @@ const { blok } = Astro.props;
                 </a>
                 <p>{post.description}</p>
                 <time>{post.date}</time>
+                <div class="element-button-wrapper">
+                    <a href={post.slug} class="element-button">
+                        Lees meer
+                    </a>
+                </div>
             </li>
         ))
     }
 </ul>
 
 <style>
+    p,
+    time {
+        color: white;
+    }
+
     ul {
         display: grid;
         grid-template-rows: auto;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     }
 
     li {
-        background: white;
-        border-left: 2px solid black;
-        border-bottom: 2px solid black;
-        padding: 32px 24px 48px 24px;
+        background: black;
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+        padding: 32px 24px 48px 32px;
+    }
+
+    li:first-child {
+        border-left: 0px solid white;
+    }
+
+    @media (max-width: 929px) {
+        .element-container:nth-child(3n + 0) {
+            border: 0px solid white;
+            outline: 2px solid white;
+        }
+    }
+
+    @media (max-width: 619px) {
+        li {
+            border-left: 0px solid white;
+        }
     }
 </style>

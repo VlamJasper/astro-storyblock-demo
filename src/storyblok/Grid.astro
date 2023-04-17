@@ -17,12 +17,18 @@ const { blok } = Astro.props;
 
 <style>
     .section-container {
-        background: white;
-        border-left: 2px solid black;
+        background: black;
+        /* border-left: 2px solid white; */
     }
 
     .element-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
+
+    @media (max-width: 929px) {
+        .section-container {
+            border-bottom: 2px solid white;
+        }
     }
 </style>

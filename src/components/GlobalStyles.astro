@@ -15,7 +15,7 @@
     h6 {
         font-weight: bold;
         margin-bottom: 1rem;
-        color: red;
+        color: white;
         text-transform: uppercase;
     }
 
@@ -72,6 +72,35 @@
         border: none;
         border-top: 1px solid #ccc;
         margin: 1rem 0;
+    }
+
+    /* Styling for CTA buttons */
+    .element-button-wrapper {
+        padding-top: 24px;
+        display: block;
+    }
+
+    .element-button {
+        display: inline-block;
+        cursor: pointer;
+
+        background-color: black;
+        color: white;
+        outline: 2px solid white;
+        box-shadow: 4px 4px 0px 1px white;
+
+        font-weight: bold;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-decoration: none !important;
+
+        padding: 1em 2em;
+        width: auto;
+    }
+
+    .element-button:hover {
+        background-color: white;
+        color: black;
     }
 
     @media (max-width: 768px) {

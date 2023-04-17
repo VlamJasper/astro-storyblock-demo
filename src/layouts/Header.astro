@@ -33,17 +33,15 @@ const currentPath = pathname.slice(1); // remove the first "/"
 <style>
     body {
         margin: 0;
-        background-color: #f4f4f4;
     }
 
     a {
-        color: #000;
-        cursor: cell;
+        color: white;
     }
 
     /* header */
     .spacer-element {
-        background: lightgray;
+        background: black;
         height: 88px;
     }
 
@@ -52,14 +50,16 @@ const currentPath = pathname.slice(1); // remove the first "/"
         width: 100%;
         min-height: 88px;
 
-        border-bottom: 2px solid #000;
-        background-color: white;
+        border-bottom: 2px solid white;
+        background-color: black;
 
         font-size: 2.5em;
         text-transform: uppercase;
 
         padding: 8px 32px;
         z-index: 3;
+
+        text-decoration: none;
     }
 
     .header a {
@@ -102,7 +102,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     .header .menu-icon .navicon {
-        background: #333;
+        background: white;
         display: block;
         height: 2px;
         position: relative;
@@ -112,7 +112,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
     .header .menu-icon .navicon:before,
     .header .menu-icon .navicon:after {
-        background: #333;
+        background: white;
         content: '';
         display: block;
         height: 100%;

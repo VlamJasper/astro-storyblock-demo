@@ -96,6 +96,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <style>
         footer {
             min-height: calc(100vh - 88px);
+            color: white;
+            background: black;
         }
 
         a,
@@ -116,21 +118,37 @@ const currentPath = pathname.slice(1); // remove the first "/"
             padding: 32px;
         }
 
-        .section-container {
-            background: white;
-            border-left: 2px solid black;
-        }
-
         .element-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             grid-template-rows: auto;
         }
 
         .wrapper {
             /* border-top: 2px solid black; */
-            border-right: 2px solid black;
-            border-bottom: 2px solid black;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+
+        .wrapper:first-child {
+            border-left: 0px solid white;
+        }
+
+        @media (max-width: 929px) {
+            .wrapper:nth-child(3n + 0) {
+                border: 0px solid white;
+                outline: 2px solid white;
+            }
+
+            .section-container {
+                border-bottom: 2px solid white;
+            }
+        }
+
+        @media (max-width: 619px) {
+            .wrapper {
+                border-left: 0px solid white;
+            }
         }
     </style>
 </footer>
