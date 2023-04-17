@@ -28,54 +28,32 @@ const { blok } = Astro.props;
         margin-top: 12px;
         /* padding-bottom: 1rem; */
 
-        /* animation properties */
-        transform: translateX(100%);
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-
-        animation: my-animation 15s linear infinite;
-        -moz-animation: my-animation 15s linear infinite;
-        -webkit-animation: my-animation 15s linear infinite;
+        animation: blur 4s ease 0s infinite;
+        -webkit-animation: blur 4s ease 0s infinite;
+        -moz-animation: blur 4s ease 0s infinite;
     }
 
-    @media (max-width: 530px) {
-        h2 {
-            animation: my-animation 5s linear infinite;
-            -moz-animation: my-animation 5s linear infinite;
-            -webkit-animation: my-animation 5s linear infinite;
+    @keyframes blur {
+        0%,
+        100% {
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px);
         }
-    }
-
-    /* for Firefox */
-    @-moz-keyframes my-animation {
-        from {
-            -moz-transform: translateX(100%);
-        }
-        to {
-            -moz-transform: translateX(-100%);
+        50% {
+            -webkit-filter: blur(3px);
+            -moz-filter: blur(3px);
+            -o-filter: blur(3px);
+            -ms-filter: blur(3px);
         }
     }
 
-    /* for Chrome */
-    @-webkit-keyframes my-animation {
-        from {
-            -webkit-transform: translateX(100%);
-        }
-        to {
-            -webkit-transform: translateX(-100%);
-        }
-    }
-
-    @keyframes my-animation {
-        from {
-            transform: translateX(100%);
-            -moz-transform: translateX(100%);
-            -webkit-transform: translateX(100%);
-        }
-        to {
-            transform: translateX(-100%);
-            -moz-transform: translateX(-100%);
-            -webkit-transform: translateX(-100%);
-        }
-    }
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: url(blur.svg#blur);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 </style>

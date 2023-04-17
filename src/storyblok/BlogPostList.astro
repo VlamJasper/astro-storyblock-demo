@@ -12,7 +12,7 @@ const { data } = await storyblokApi.get('cdn/stories', {
 const posts = data.stories.map((story) => {
     return {
         title: story.content.title,
-        date: new Date(story.published_at).toLocaleDateString('en-US', {
+        date: new Date(story.published_at).toLocaleDateString('en-UK', {
             dateStyle: 'full',
         }),
         description: story.content.description,
@@ -46,6 +46,10 @@ const { blok } = Astro.props;
     p,
     time {
         color: white;
+    }
+
+    time {
+        font-style: italic;
     }
 
     ul {
