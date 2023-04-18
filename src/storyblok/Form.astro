@@ -9,6 +9,7 @@ const { blok } = Astro.props;
     method="POST"
     netlify-honeypot="bot-field"
     data-netlify="true"
+    action="/success"
 >
     <p class="hidden">
         <label>
@@ -21,7 +22,7 @@ const { blok } = Astro.props;
                 <div class="element">
                     <p>
                         <label>
-                            Email<input type="text" name="email" />
+                            Email<input type="email" name="email" />
                         </label>
                     </p>
                 </div>
@@ -49,7 +50,11 @@ const { blok } = Astro.props;
                 <div class="element">
                     <p>
                         <label
-                            >Message<input type="text" name="message" />
+                            >Message<input
+                                class="message"
+                                type="text"
+                                name="message"
+                            />
                         </label>
                     </p>
                 </div>
@@ -94,5 +99,9 @@ const { blok } = Astro.props;
 
     .wrapper {
         padding: 8px 0px;
+    }
+
+    .message {
+        height: 80px;
     }
 </style>
