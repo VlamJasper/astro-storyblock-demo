@@ -13,6 +13,7 @@ export default defineConfig({
         blogPost: 'storyblok/BlogPost',
         blogPostList: 'storyblok/BlogPostList',
         feature: 'storyblok/Feature',
+        form: 'storyblok/Form',
         image: 'storyblok/Image',
         grid: 'storyblok/Grid',
         hero: 'storyblok/Hero',

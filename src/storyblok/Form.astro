@@ -1,0 +1,45 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+
+const { blok } = Astro.props;
+---
+
+<form
+    name="contact"
+    method="POST"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
+>
+    <p class="hidden">
+        <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+    </p>
+    <div class="section-container">
+        <div class="element-container">
+            <div class="wrapper">
+                <div class="element">
+                    <p>
+                        <label>
+                            Email: <input type="text" name="email" />
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="element">
+                    <p>
+                        <label>Name: <input type="text" name="name" /></label>
+                    </p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="element">
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
