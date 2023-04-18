@@ -58,6 +58,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     .header a {
+        position: relative;
+        top: 3px;
         text-decoration: none;
     }
 
@@ -159,14 +161,17 @@ const currentPath = pathname.slice(1); // remove the first "/"
         .header li {
             float: left;
         }
+
         .header li a {
             padding: 24px;
         }
+
         .header .menu {
             clear: none;
             float: right;
             max-height: none;
         }
+
         .header .menu-icon {
             display: none;
         }
