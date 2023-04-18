@@ -21,20 +21,42 @@ const { blok } = Astro.props;
                 <div class="element">
                     <p>
                         <label>
-                            Email: <input type="text" name="email" />
+                            Email<input type="text" name="email" />
                         </label>
                     </p>
                 </div>
             </div>
+
             <div class="wrapper">
                 <div class="element">
                     <p>
-                        <label>Name: <input type="text" name="name" /></label>
+                        <label>Name<input type="text" name="name" /></label>
                     </p>
                 </div>
             </div>
+
             <div class="wrapper">
                 <div class="element">
+                    <p>
+                        <label
+                            >Subject<input type="text" name="subject" />
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="element">
+                    <p>
+                        <label
+                            >Message<input type="text" name="message" />
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="element-button-wrapper">
+                <div class="element-button">
                     <p>
                         <button type="submit">Send</button>
                     </p>
@@ -43,3 +65,34 @@ const { blok } = Astro.props;
         </div>
     </div>
 </form>
+
+<style>
+    form {
+        color: white;
+        background: black;
+        border-bottom: 2px solid white;
+        padding: 32px;
+    }
+
+    input {
+        width: 100%;
+        min-height: 40px;
+        background: black;
+        border: 2px solid white;
+        box-shadow: 4px 4px 0px 1px white;
+    }
+
+    label,
+    button {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    button {
+        background: white;
+    }
+
+    .wrapper {
+        padding: 8px 0px;
+    }
+</style>
