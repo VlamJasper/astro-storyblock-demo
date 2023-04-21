@@ -8,7 +8,7 @@ const content = renderRichText(blok.content);
     <div class="element-wrapper">
         <div class="title-column">
             <h1>{blok.title}</h1>
-            <p>{blok.description}</p>
+            <h2>{blok.description}</h2>
         </div>
         <img
             class="title-image"
@@ -20,6 +20,8 @@ const content = renderRichText(blok.content);
 </article>
 
 <style>
+    /* MARKDOWN TITLE STYLES */
+
     article {
         border-bottom: 2px solid white;
         background: black;
@@ -51,6 +53,8 @@ const content = renderRichText(blok.content);
         width: 100%;
         height: calc(100vh - 88px);
     }
+
+    /* RESPONSIVE STYLES */
 
     @media (max-width: 1400px) {
         h1 {

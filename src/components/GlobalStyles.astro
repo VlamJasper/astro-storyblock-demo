@@ -1,12 +1,12 @@
 <style is:global>
-    /* Set base font styles */
+    /* BASE FONT */
     body {
         font-family: Tahoma, Geneva, Sans-Serif;
         font-size: 16px;
         line-height: 1.5;
     }
 
-    /* Set heading styles */
+    /* HEADINGS */
     h1,
     h2,
     h3,
@@ -26,6 +26,7 @@
 
     h2 {
         font-size: 2rem;
+        line-height: 1;
     }
 
     h3 {
@@ -44,38 +45,35 @@
         font-size: 0.875rem;
     }
 
-    a:hover {
-        /* text-decoration: underline; */
-    }
-
-    /* Set code block styles */
+    /* MARKDOWN BLOGPOSTS */
     pre {
-        background-color: white;
+        background-color: black;
         padding: 1rem;
         overflow-x: auto;
+        border: 2px solid white;
     }
 
     code {
         font-family: 'Courier New', Courier, monospace;
+        color: white;
     }
 
-    /* Set blockquote styles */
     blockquote {
         color: white;
+        font-style: italic;
         background-color: #black;
         padding: 1rem;
         margin: 1rem 0;
-        border-left: 5px solid white;
+        border-left: 2px solid white;
     }
 
-    /* Set horizontal rule style */
     hr {
         border: none;
         border-top: 1px solid white;
         margin: 1rem 0;
     }
 
-    /* Styling for CTA buttons */
+    /* CTA BUTTONS */
     .element-button-wrapper {
         padding-top: 24px;
         display: block;
@@ -102,6 +100,8 @@
         background-color: white;
         color: black;
     }
+
+    /* RESPONSIVE STYLES */
 
     @media (max-width: 768px) {
         h1 {
