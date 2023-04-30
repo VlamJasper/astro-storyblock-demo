@@ -5,7 +5,7 @@ const content = renderRichText(blok.content);
 ---
 
 <article {...storyblokEditable(blok)}>
-    <div class="element-wrapper">
+    <div class="wrapper">
         <div class="title-column">
             <h1>{blok.title}</h1>
             <h2>{blok.description}</h2>
@@ -28,7 +28,7 @@ const content = renderRichText(blok.content);
         color: white;
     }
 
-    .element-wrapper {
+    .wrapper {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
@@ -63,7 +63,7 @@ const content = renderRichText(blok.content);
     }
 
     @media (max-width: 768px) {
-        .element-wrapper {
+        .wrapper {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-template-areas:
