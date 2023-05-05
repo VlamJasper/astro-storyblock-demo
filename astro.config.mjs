@@ -10,6 +10,7 @@ export default defineConfig({
       components: {
         globalStyles: 'components/GlobalStyles',
         page: 'storyblok/Page',
+        accordion: "storyblok/Accordion",
         blogPost: 'storyblok/BlogPost',
         blogPostList: 'storyblok/BlogPostList',
         feature: 'storyblok/Feature',
