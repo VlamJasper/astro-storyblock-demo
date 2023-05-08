@@ -6,32 +6,25 @@ const { blok } = Astro.props;
 
 <div class="wrapper" {...storyblokEditable(blok)}>
     <details>
-        <summary><h3>{blok.summary}</h3></summary>
+        <summary><h3>{blok.summary}&#8600;</h3></summary>
         <p>{blok.content}</p>
     </details>
 </div>
 
 <style>
-    /* DESCRIPTION */
+    /* DROPDOWN STYLING */
 
     .wrapper {
         background: black;
     }
 
     details {
-        padding: 32px 32px 16px 32px;
+        padding: 16px 32px 20px 32px;
         border-bottom: 2px solid white;
-    }
-
-    details > summary {
-        list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-        display: none;
     }
 
     p {
         color: white;
-        padding-bottom: 16px;
+        padding-bottom: 24px;
     }
 </style>
