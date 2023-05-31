@@ -31,7 +31,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
     }
 
     a {
-        color: white;
+        color: var(--main-text-color);
     }
 
     /* header */
@@ -45,8 +45,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
         width: 100%;
         min-height: 88px;
 
-        border-bottom: 2px solid white;
-        background-color: black;
+        border-bottom: var(--main-border-weight) solid var(--main-border-color);
+        background-color: var(--main-bg-color);
 
         font-size: 2.5em;
         text-transform: uppercase;

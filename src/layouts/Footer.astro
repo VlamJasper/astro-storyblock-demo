@@ -51,7 +51,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <style>
         footer {
             min-height: calc(100vh - 88px);
-            color: white;
+            color: var(--main-text-color);
         }
 
         a,
@@ -79,9 +79,11 @@ const currentPath = pathname.slice(1); // remove the first "/"
         }
 
         .wrapper {
-            background: black;
-            border-left: 2px solid white;
-            border-bottom: 2px solid white;
+            background: var(--main-bg-color);
+            border-left: var(--main-border-weight) solid
+                var(--main-border-color);
+            border-bottom: var(--main-border-weight) solid
+                var(--main-border-color);
         }
 
         .wrapper:first-child {
@@ -91,17 +93,18 @@ const currentPath = pathname.slice(1); // remove the first "/"
         @media (max-width: 929px) {
             .wrapper:nth-child(3n + 0) {
                 border: 0px solid white;
-                outline: 2px solid white;
+                outline: var(--main-border-weight) solid white;
             }
 
             .section-container {
-                border-bottom: 2px solid white;
+                border-bottom: var(--main-border-weight) solid
+                    var(--main-border-color);
             }
         }
 
         @media (max-width: 619px) {
             .wrapper {
-                border-left: 0px solid white;
+                border-left: 0px solid var(--main-border-color);
             }
         }
     </style>

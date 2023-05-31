@@ -12,22 +12,16 @@ const { blok } = Astro.props;
 
 <style>
     div {
-        background: black;
-        border-bottom: 2px solid white;
+        background-color: var(--main-bg-color);
+        border-bottom: var(--main-border-weight) solid var(--main-border-color);
         overflow: hidden;
         user-select: none;
     }
 
     h2 {
-        color: white;
         font-weight: bold;
         text-align: center;
         white-space: nowrap;
-
         margin-top: 12px;
-
-        animation: blur 12s ease 0s infinite;
-        -webkit-animation: blur 12s ease 0s infinite;
-        -moz-animation: blur 12s ease 0s infinite;
     }
 </style>

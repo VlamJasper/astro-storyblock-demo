@@ -47,7 +47,7 @@ const { blok } = Astro.props;
 
     p,
     time {
-        color: white;
+        color: var(--main-text-color);
     }
 
     time {
@@ -61,9 +61,9 @@ const { blok } = Astro.props;
     }
 
     li {
-        background: black;
-        border-left: 2px solid white;
-        border-bottom: 2px solid white;
+        background-color: var(--main-bg-color);
+        border-left: var(--main-border-weight) solid var(--main-border-color);
+        border-bottom: var(--main-border-weight) solid var(--main-border-color);
         padding: 32px 24px 48px 32px;
     }
 
@@ -75,14 +75,14 @@ const { blok } = Astro.props;
 
     @media (max-width: 929px) {
         .element-container:nth-child(3n + 0) {
-            border: 0px solid white;
-            outline: 2px solid white;
+            border: 0px solid var(--main-border-color);
+            outline: var(--main-border-weight) solid var(--main-border-color);
         }
     }
 
     @media (max-width: 619px) {
         li {
-            border-left: 0px solid white;
+            border-left: 0px solid var(--main-border-color);
         }
     }
 </style>
